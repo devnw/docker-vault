@@ -3,6 +3,8 @@ FROM alpine:latest
 # This is the release of Vault to pull in.
 ARG VAULT_VERSION=1.17.1
 
+ENV SKIP_SETCAP=1
+
 # Create a vault user and group first so the IDs get set the same way,
 # even as the rest of this may change over time.
 RUN addgroup vault && \

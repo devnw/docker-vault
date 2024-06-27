@@ -32,4 +32,4 @@ jobs:
           #  with:
           #    registry: us-east1-docker.pkg.dev/codepros/codepros
       - name: Docker Build and Push
-        run: docker build --push -t us-east1-docker.pkg.dev/codepros/codepros/vault:${{ github.ref }} ./0.X/
+        run: docker build --push -t us-east1-docker.pkg.dev/codepros/codepros/vault:${GITHUB_REF##*/} ./0.X/
